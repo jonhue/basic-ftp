@@ -500,7 +500,7 @@ export class Client {
             return await this._downloadToStream(destination, remotePath, startAt)
         }
         catch(err) {
-            const localFileStats = await ignoreError(() => fsStat(localPath))
+            const localFileStats: any = await ignoreError(() => fsStat(localPath))
             const hasDownloadedData = localFileStats && localFileStats.size > 0
             const shouldRemoveLocalFile = !appendingToLocalFile && !hasDownloadedData
             if (shouldRemoveLocalFile) {
