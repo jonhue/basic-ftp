@@ -1,4 +1,4 @@
-import { createReadStream, createWriteStream, mkdir, readdir, stat, open, close, unlink } from "fs"
+import { createReadStream, createWriteStream, mkdir, readdir, stat, open, close, unlink } from "browserify-fs"
 import { join } from "path"
 import { Readable, Writable } from "stream"
 import { connect as connectTLS, ConnectionOptions as TLSConnectionOptions } from "tls"
